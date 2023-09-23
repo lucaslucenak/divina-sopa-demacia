@@ -1,7 +1,11 @@
 package com.lucaslucenak.Demacia.models;
 
 import jakarta.persistence.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "address_request")
@@ -22,16 +26,24 @@ public class AddressRequestModel {
 
         private String md5OfMessageBody;
 
+        @CreatedDate
+        private LocalDateTime createdAt;
+
+        @LastModifiedDate
+        private LocalDateTime updatedAt;
+
         public AddressRequestModel() {
         }
 
-        public AddressRequestModel(Long id, String requestId, String messageId, String body, Integer httpStatus, String md5OfMessageBody) {
+        public AddressRequestModel(Long id, String requestId, String messageId, String body, Integer httpStatus, String md5OfMessageBody, LocalDateTime createdAt, LocalDateTime updatedAt) {
                 this.id = id;
                 this.requestId = requestId;
                 this.messageId = messageId;
                 this.body = body;
                 this.httpStatus = httpStatus;
                 this.md5OfMessageBody = md5OfMessageBody;
+                this.createdAt = createdAt;
+                this.updatedAt = updatedAt;
         }
 
         public Long getId() {
@@ -80,6 +92,22 @@ public class AddressRequestModel {
 
         public void setMd5OfMessageBody(String md5OfMessageBody) {
                 this.md5OfMessageBody = md5OfMessageBody;
+        }
+
+        public LocalDateTime getCreatedAt() {
+                return createdAt;
+        }
+
+        public void setCreatedAt(LocalDateTime createdAt) {
+                this.createdAt = createdAt;
+        }
+
+        public LocalDateTime getUpdatedAt() {
+                return updatedAt;
+        }
+
+        public void setUpdatedAt(LocalDateTime updatedAt) {
+                this.updatedAt = updatedAt;
         }
 }
 
