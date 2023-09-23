@@ -13,7 +13,7 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
-    @PostMapping(value = "/request-order")
+    @PostMapping(value = "/save-order")
     public ResponseEntity<SendMessageResult> requestOrder(@RequestBody String orderJson) {
         return ResponseEntity.ok().body(orderService.requestOrder(orderJson));
     }
