@@ -8,9 +8,9 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "order_request")
+@Table(name = "client_account_request")
 @EntityListeners(AuditingEntityListener.class)
-public class OrderRequestModel {
+public class ClientAccountRequestModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,10 +32,10 @@ public class OrderRequestModel {
     @LastModifiedDate
     private LocalDateTime updatedAt;
 
-    public OrderRequestModel() {
+    public ClientAccountRequestModel() {
     }
 
-    public OrderRequestModel(Long id, String requestId, String messageId, String body, Integer httpStatus, String md5OfMessageBody, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public ClientAccountRequestModel(Long id, String requestId, String messageId, String body, Integer httpStatus, String md5OfMessageBody, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.requestId = requestId;
         this.messageId = messageId;
