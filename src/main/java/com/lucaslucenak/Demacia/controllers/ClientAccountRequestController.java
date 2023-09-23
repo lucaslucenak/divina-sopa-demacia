@@ -16,7 +16,7 @@ public class ClientAccountRequestController {
     @Autowired
     ClientAccountRequestService clientAccountRequestService;
 
-    @PostMapping(value = "/save-clientAccount")
+    @PostMapping(value = "/save-client-account")
     public ResponseEntity<SendMessageResult> requestClientAccount(@RequestBody String body) {
         return ResponseEntity.ok().body(clientAccountRequestService.requestClientAccount(body));
     }
