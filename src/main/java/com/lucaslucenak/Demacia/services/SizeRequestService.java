@@ -17,7 +17,7 @@ public class SizeRequestService {
     @Autowired
     private SizeRequestRepository sizeRequestRepository;
 
-    @Value("${aws.sqs.size.queue-url}")
+    @Value("${aws.sqs.queues.size.queue-url}")
     private String queueUrl;
 
     public SendMessageResult requestSize(Object body) {

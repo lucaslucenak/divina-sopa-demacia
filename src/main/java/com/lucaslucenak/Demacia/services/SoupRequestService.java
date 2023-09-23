@@ -17,7 +17,7 @@ public class SoupRequestService {
     @Autowired
     private SoupRequestRepository soupRequestRepository;
 
-    @Value("${aws.sqs.soup.queue-url}")
+    @Value("${aws.sqs.queues.soup.queue-url}")
     private String queueUrl;
 
     public SendMessageResult requestSoup(Object body) {
