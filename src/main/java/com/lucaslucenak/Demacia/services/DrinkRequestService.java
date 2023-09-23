@@ -17,7 +17,7 @@ public class DrinkRequestService {
     @Autowired
     private DrinkRequestRepository drinkRequestRepository;
 
-    @Value("${aws.sqs.drink.queue-url}")
+    @Value("${aws.sqs.queues.drink.queue-url}")
     private String queueUrl;
 
     public SendMessageResult requestDrink(Object body) {

@@ -17,7 +17,7 @@ public class AddressRequestService {
     @Autowired
     private AddressRequestRepository addressRequestRepository;
 
-    @Value("${aws.sqs.address.queue-url}")
+    @Value("${aws.sqs.queues.address.queue-url}")
     private String queueUrl;
 
     public SendMessageResult requestAddress(Object body) {

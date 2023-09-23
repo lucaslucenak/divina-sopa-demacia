@@ -17,7 +17,7 @@ public class ClientAccountRequestService {
     @Autowired
     private ClientAccountRequestRepository clientAccountRequestRepository;
 
-    @Value("${aws.sqs.client-account.queue-url}")
+    @Value("${aws.sqs.queues.client-account.queue-url}")
     private String queueUrl;
 
     public SendMessageResult requestClientAccount(Object body) {
