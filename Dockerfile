@@ -1,4 +1,4 @@
 FROM openjdk:17
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+EXPOSE 8081
+ADD target/demacia-docker.jar demacia-docker.jar
+ENTRYPOINT ["java", "-jar", "/demacia-docker.jar"]

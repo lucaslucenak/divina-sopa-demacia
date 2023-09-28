@@ -11,13 +11,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AwsSqsConfig {
 
-    @Value("${aws.sqs.access-key}")
+    @Value("${aws.iam.access-key}")
     private String awsAccessKey;
 
-    @Value("${aws.sqs.secret-key}")
+    @Value("${aws.iam.secret-key}")
     private String awsSecretKey;
 
-    @Value("${aws.sqs.region}")
+    @Value("${aws.region}")
     private String awsRegion;
 
     @Bean

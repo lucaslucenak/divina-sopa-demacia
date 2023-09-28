@@ -17,7 +17,7 @@ public class NeighbourhoodRequestService {
     @Autowired
     private NeighbourhoodRequestRepository neighbourhoodRequestRepository;
 
-    @Value("${aws.sqs.queues.neighbourhood.queue-url}")
+    @Value("${aws.sqs.neighbourhood.url}")
     private String queueUrl;
 
     public SendMessageResult requestNeighbourhood(Object body) {

@@ -68,6 +68,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>demacia-docker</finalName>
 	</build>
 
 </project>

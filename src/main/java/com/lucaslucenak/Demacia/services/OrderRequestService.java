@@ -17,7 +17,7 @@ public class OrderRequestService {
     @Autowired
     private OrderRequestRepository orderRequestRepository;
 
-    @Value("${aws.sqs.queues.order.queue-url}")
+    @Value("${aws.sqs.order.url}")
     private String queueUrl;
 
     public SendMessageResult requestOrder(Object body) {
